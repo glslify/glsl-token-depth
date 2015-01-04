@@ -14,6 +14,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "chalk": "^0.5.1",
     "glsl-tokenizer": "git://github.com/stackgl/glsl-tokenizer#2.0.0",
     "tap-spec": "^2.1.1",
     "tape": "^3.0.3"

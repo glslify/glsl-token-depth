@@ -67,6 +67,17 @@ test('glsl-token-depth: function declarations', function(t) {
     t.equal(token.depth, 0, 'top-level')
   })
 
+  eachIdent(tokens, 'aFunction', function(token) {
+    t.equal(token.depth, 0, 'top-level')
+  })
+
+  eachIdent(tokens, '_x', function(token, i) {
+    if (i < 2) t.equal(token.depth, 1, '_x: function arguments are one level lower')
+  })
+  eachIdent(tokens, '_y', function(token, i) {
+    if (i < 2) t.equal(token.depth, 1, '_y: function arguments are one level lower')
+  })
+
   t.end()
 })
 
