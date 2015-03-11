@@ -30,7 +30,7 @@ function getTokenDepth(tokens) {
     while (tokens[index] && tokens[index].data !== ';' && tokens[index].data !== '{') {
       tokens[index++].depth++
     }
-    if (tokens[index].data === '{') tokens[index].depth++
+    if (tokens[index] && tokens[index].data === '{') tokens[index].depth++
   }
 
   return tokens
